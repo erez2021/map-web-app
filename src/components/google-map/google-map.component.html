@@ -1,0 +1,18 @@
+<div class="google-map-container">
+  <google-map [options]="mapOptions">
+    <div *ngFor="let location of ringDataToDisplay">
+      <map-marker
+        [position]="{ lat: location.latitude, lng: location.longitude }"
+      ></map-marker>
+      <map-circle [options]="getCircleOptions(location)"></map-circle>
+    </div>
+    <div class="select-overlay">
+      <label for="ringWidth">Ring Width:</label>
+      <select [(ngModel)]="ringWidth" id="ringWidth">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </div>
+  </google-map>
+</div>

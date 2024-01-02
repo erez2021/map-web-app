@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: lightblue;
+  color: rgb(56, 44, 44);
+}
+.map-container {
+  height: 80vh !important;
+  width: 70vw !important;
+  margin-left: 15px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #7a4f4f;
+}

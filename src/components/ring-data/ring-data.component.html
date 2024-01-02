@@ -1,0 +1,32 @@
+<table class="map-info" *ngIf="ringData.length; else noData">
+  <thead>
+    <tr>
+      <th>Select</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Radius</th>
+    </tr>
+  </thead>
+  <tbody>
+    <input
+      type="checkbox"
+      (change)="toggleAllCheckbox()"
+      [checked]="isAllChecked"
+    />
+    <tr *ngFor="let item of ringData" [style.background-color]="item.color">
+      <td>
+        <input
+          type="checkbox"
+          [checked]="item.isSelected"
+          (change)="onCheckboxChange(item)"
+        />
+      </td>
+      <td>{{ item.latitude }}</td>
+      <td>{{ item.longitude }}</td>
+      <td>{{ item.radius }}</td>
+    </tr>
+  </tbody>
+</table>
+<ng-template #noData
+  ><div class="no-data">No data to display</div>
+</ng-template>

@@ -1,0 +1,14 @@
+.google-map-container {
+  position: relative;
+}
+.select-overlay {
+  position: absolute;
+  right: 0px;
+  top: 50px;
+  text-align: end;
+}
+select {
+  height: 30px;
+  width: 60px;
+  border-radius: 7px;
+}
